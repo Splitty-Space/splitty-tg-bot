@@ -24,7 +24,6 @@ def start(message: types.Message):
             web_app=types.WebAppInfo(url=config.SITE_URL),
         )
     )
-
     user_photos = bot.get_user_profile_photos(user_id, limit=1)
 
     if user_photos.photos:
