@@ -1,5 +1,5 @@
 # PROD
-TOKEN = "6933863270:AAHkqpT7_gj5LORo2B2wWY721dvCj_q7x2w"
+TOKEN = "6355691051:AAHsAKMF_CFPW9W5BVFVw61ZQNEK5u70f10"
 SITE_URL = "https://site.splitty.site"
 SERVER_URL = "https://api.splitty.site"
 
