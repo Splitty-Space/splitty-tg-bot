@@ -20,7 +20,7 @@ def start(message: types.Message):
     keyboard = types.InlineKeyboardMarkup()
     keyboard.add(
         types.InlineKeyboardButton(
-            "Open web app",
+            "Launch Splitty",
             web_app=types.WebAppInfo(url=config.SITE_URL),
         )
     )
@@ -42,7 +42,7 @@ def start(message: types.Message):
     )
     bot.send_message(
         chat_id,
-        "Hello in bot",
+        "Welcome to Splitty",
         reply_markup=keyboard,
     )
 
