@@ -8,5 +8,5 @@
 # SERVER_URL = "http://127.0.0.1:8000"
 
 TOKEN = "7255787922:AAGhh5qrqCEFAivFn6Vc1nIMhr80y1x6oe8"
-SITE_URL = "https://plain-glasses-brake.loca.lt" # "http://127.0.0.1:3000"
+SITE_URL = "http://127.0.0.1:3000" # "http://127.0.0.1:3000"
 SERVER_URL = "http://127.0.0.1:8000"
