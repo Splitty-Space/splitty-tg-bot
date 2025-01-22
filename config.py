@@ -1,3 +1,4 @@
+import os
 # PROD
 #TOKEN = "6355691051:AAHsAKMF_CFPW9W5BVFVw61ZQNEK5u70f10"
 #SITE_URL = "https://site.splitty.site"
@@ -7,6 +8,6 @@
 # SITE_URL = "https://875f-212-180-229-1.ngrok-free.app"
 # SERVER_URL = "http://127.0.0.1:8000"
 
-TOKEN = "7255787922:AAGhh5qrqCEFAivFn6Vc1nIMhr80y1x6oe8"
-SITE_URL = "http://127.0.0.1:3000" # "http://127.0.0.1:3000"
-SERVER_URL = "http://127.0.0.1:8000"
+TOKEN = os.getenv('TOKEN', "7255787922:AAGhh5qrqCEFAivFn6Vc1nIMhr80y1x6oe8")
+SITE_URL = os.getenv('SITE_URL', "http://127.0.0.1:3000")# "http://127.0.0.1:3000"
+SERVER_URL = os.getenv('SERVER_URL', "http://127.0.0.1:8000")

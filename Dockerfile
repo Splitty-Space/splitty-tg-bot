@@ -1,17 +1,15 @@
-# Use a lightweight base image
-FROM python:3.9-alpine
+# Base image
+FROM python:3.10-slim
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the requirements file to the working directory
-COPY requirements.txt .
+# Install dependencies
+COPY requirements.txt /app/
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Install the Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy bot code
+COPY . /app/
 
-# Copy the application code to the working directory
-COPY . .
-
-# Command to run the application
+# Run the bot
 CMD ["python", "main.py"]
