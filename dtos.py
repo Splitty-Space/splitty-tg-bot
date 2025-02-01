@@ -7,6 +7,7 @@ class CreateUser:
     username: str
     fullname: str
     photo_url: str
+    referred_by_code: str
 
 
 @dataclass

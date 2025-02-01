@@ -32,12 +32,16 @@ def start(message: types.Message):
     else:
         file_url = ''
 
+    parts = message.text.split()
+    code = parts[1] if len(parts) > 1 else None
+
     api.register_user(
         CreateUser(
             user_id=user_id,
             username=message.from_user.username,
             fullname=message.from_user.full_name,
             photo_url=file_url,
+            referred_by_code=code,
         )
     )
     bot.send_message(
