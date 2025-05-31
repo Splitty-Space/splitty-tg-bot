@@ -38,10 +38,15 @@ def api_send_message():
         user_id = data.get("user_id")
         text = data.get("text")
 
+        print("user_id = ", user_id)
+        print("text = ", text)
+
         if not user_id or not text:
             return jsonify({"error": "Missing 'user_id' or 'text' field."}), 400
 
         success = send_telegram_message(user_id, text)
+
+        print("success = ", success)
 
         if success:
             return jsonify({"status": "Message sent"})
@@ -49,6 +54,8 @@ def api_send_message():
             return jsonify({"error": "Failed to send message"}), 500
 
     except Exception as e:
+        print("error = ", e)
+
         with open("logs.txt", "a", encoding="utf-8") as f:
             f.write(f"{traceback.format_exc()}\n")
         return jsonify({"error": "Internal server error"}), 500
