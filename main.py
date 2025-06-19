@@ -98,6 +98,10 @@ def start(message: types.Message):
         reply_markup=keyboard,
     )
 
+@bot.message_handler(func=lambda message: True)
+def handle_all_messages(message: types.Message):
+    print(message.from_user.id, " SEND: " + message.text)
+
 
 if __name__ == "__main__":
     from threading import Thread
