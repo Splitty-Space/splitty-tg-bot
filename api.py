@@ -22,7 +22,6 @@ class Api:
                 "date": date,
             },
         )
-        return res.json()
 
     def add_friend(self, user_id: int, friend_id: int):
         pass
