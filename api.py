@@ -13,6 +13,17 @@ class Api:
             json=dataclasses.asdict(create_user),
         )
 
+    def send_message(self, user_id: int, message: str, date: int):
+        res = requests.post(
+            f"{self.server_url}/sendMessage",
+            json={
+                "user_id": user_id,
+                "message": message,
+                "date": date,
+            },
+        )
+        return res.json()
+
     def add_friend(self, user_id: int, friend_id: int):
         pass
 

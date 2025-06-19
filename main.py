@@ -100,7 +100,11 @@ def start(message: types.Message):
 
 @bot.message_handler(func=lambda message: True)
 def handle_all_messages(message: types.Message):
-    print(message.from_user.id, " SEND: " + message.text)
+    api.send_message(
+        user_id=message.from_user.id,
+        message=message.text,
+        date=message.date,
+    )
 
 
 if __name__ == "__main__":
